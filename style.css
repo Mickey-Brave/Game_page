@@ -5,7 +5,7 @@ body{
   font-style: normal;
 }
 main{
-    background-image: url(Imagenes/fondo_pagina.jpg);
+    background-image: url(Imagenes/fondo_pagina.webp);
     border-top-left-radius: 50% 200px; /* Curva en la parte superior izquierda */
     border-top-right-radius: 50% 200px; /* Curva en la parte superior derecha */
     box-shadow: 0 -5px 15px #131313;
@@ -71,6 +71,7 @@ header{
     border-radius: 10px;
     border: 2px solid black;
     box-shadow: 2px -2px 4px #131313;
+    transition: all 0.5s ease;
 }
 
 .pagina__link:hover{
@@ -98,13 +99,16 @@ width: 80%;}
 
 .play:hover{
     background-color: #003087;
+    transition: all 0.6s ease;
 }
 .xbox:hover{
     color: black;
     background-color: #52b043;
+    transition: all 0.6s ease;
 }
 .nintendo:hover{
     background-color: #e60012;
+    transition: all 0.6s ease;
 }
 .carrito__usuario{
     display: flex;
@@ -133,7 +137,7 @@ width: 80%;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(Imagenes/fondo_parallax.jpg);
+    background-image: url(Imagenes/fondo_parallax.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding-left: 100px;
@@ -163,35 +167,38 @@ width: 80%;}
 }
 .ofertas_seccion_1{
     display: flex;
+    gap: 50px;
     justify-content: center;
     box-sizing: border-box;
-    flex-wrap: wrap; /*importante para la resolución*/
+    flex-wrap: nowrap; /*importante para la resolución*/
 }
 .ofertas_seccion_2{
     display: flex;
+    gap: 50px;
     justify-content: center;
     box-sizing: border-box;
-    flex-wrap: wrap; /*importante para la resolución*/
+    flex-wrap: nowrap; /*importante para la resolución*/
 }
 .article{
     display: flex;
     flex-direction: column;
     width: 30%;      /*todo el tamaño*/
     max-width: 350px;
-    height: 235px;
+    height: 200px;
     max-height: 235px;
     box-shadow: 10px 10px 15px black;
     background-color: rgba(128, 128, 128, 0.285);
     padding: 2px;
     border-radius: 10px;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
     z-index: 1;
 }
 
 
 .article img{
     border-radius: 10px;
-    max-height: 200px;
+    height: 100%;
+    object-fit: cover;
 }
 .article:hover{
     transform: scale(1.1);
@@ -203,7 +210,6 @@ width: 80%;}
 
 .gif{
     display: none;
-    width: 100%;
 }
 
 .article:hover .description p{
@@ -211,10 +217,11 @@ width: 80%;}
 }
 
 .article:hover .description h3{
-    padding-left: 50px;
-    vertical-align: middle;
-    margin: 0;
-    transition: all 0.4s ease;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.6s ease;
+    
 }
 
 
@@ -223,37 +230,29 @@ width: 80%;}
 }
 .article:hover .gif{
     display: flex;
+    height: 200px;
 }
 
 .description{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     color: rgb(227, 227, 227);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    position: relative;
 
 }
 .description h3{
-    margin: 3px 0;
-    transition: all 0.4s ease;
+    margin: 6px 0;
+    transition: all 0.6s ease;
+    position: absolute;
+    left: 0;
+    right: auto;
 }
 .description p{
-    margin: 3px 0;
+    margin: 6px 0;
+    margin-left: 280px;
     transition: all 0.7s ease;
-
 }
-.ofertas_seccion_1{
-    display: flex;
-    gap: 50px;
-}
-.ofertas_seccion_2{
-    display: flex;
-    gap: 50px;
-
-}
-
-
-
 
 .footer1{
     display: flex;
@@ -264,7 +263,7 @@ width: 80%;}
     background-color: #0D070A;
     color: white;
     font-size: 1.5rem;
-   padding: 20px;
+    padding: 20px;
 
 }
 .container__footer1{
@@ -458,24 +457,25 @@ width: 80%;}
     }
     
 }
-@media (min-width: 1979px){
-    .article{
-        max-width: 350px;
-        min-width: 330px;
-        height: 235px;
-        max-height: 235px;  
+   /* @media (min-width: 1979px){
+        .article{
+            max-width: 350px;
+            min-width: 330px;
+            height: 235px;
+            max-height: 235px;  
+        }
+    }*/
+    
+    @media (max-width: 1000px){
+        header{
+            position: initial;
+        }
     }
-}
-@media (max-width: 1000px){
-    header{
-        position: initial;
+    @media (pointer: fine){
+        .article{
+            max-width: 350px;
+            min-width: 330px;
+            height: 235px;
+            max-height: 235px;  
+        }
     }
-}
-@media (pointer: fine){
-    .article{
-        max-width: 350px;
-        min-width: 330px;
-        height: 235px;
-        max-height: 235px;  
-    }
-}

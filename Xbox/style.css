@@ -5,7 +5,7 @@ body{
   font-style: normal;
 }
 main{
-    background-image: url(../Imagenes/fondo_pagina.jpg);
+    background-image: url(../Imagenes/fondo_pagina.webp);
     border-top-left-radius: 50% 200px; /* Curva en la parte superior izquierda */
     border-top-right-radius: 50% 200px; /* Curva en la parte superior derecha */
     box-shadow: 0 -5px 15px #131313;
@@ -136,7 +136,7 @@ width: 80%;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../Imagenes/fondo_xbox.jpg);
+    background-image: url(../Imagenes/fondo_xbox.webp);
     background-repeat: no-repeat;
     background-color: #525252;
     background-size: cover;
@@ -168,22 +168,24 @@ width: 80%;}
 }
 .ofertas_seccion_1{
     display: flex;
+    gap: 50px;
     justify-content: center;
     box-sizing: border-box;
-    flex-wrap: wrap; /*importante para la resolución*/
+    flex-wrap: nowrap; /*importante para la resolución*/
 }
 .ofertas_seccion_2{
     display: flex;
+    gap: 50px;
     justify-content: center;
     box-sizing: border-box;
-    flex-wrap: wrap; /*importante para la resolución*/
+    flex-wrap: nowrap; /*importante para la resolución*/
 }
 .article{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     width: 30%;
     max-width: 350px;
-    height: 235px;
     max-height: 235px;
     box-shadow: 10px 10px 15px black;
     background-color: #52b04354;
@@ -200,7 +202,8 @@ width: 80%;}
     transform: scale(1.1);
     cursor: pointer;
     padding: 0;
-    height: 180px;
+    margin-bottom: 50px;
+    height: 140px;
    transition: all 0.6s ease;
 }
 .gif{
@@ -239,17 +242,6 @@ width: 80%;}
     margin: 3px 0;
     transition: all 0.7s ease;
 }
-.ofertas_seccion_1{
-    display: flex;
-    gap: 50px;
-}
-.ofertas_seccion_2{
-    display: flex;
-    gap: 50px;
-
-}
-
-
 .footer1{
     display: flex;
     flex-wrap: wrap;
@@ -352,3 +344,127 @@ width: 80%;}
     color: white;
     padding-left: 10%;
 }
+
+/*--------------------------------------------------------------------------------------------------------*/
+@media all and (hover:none) and (pointer:coarse) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: initial;
+    }
+    main{
+        border-top-left-radius: 50% 50px; /* Curva en la parte superior izquierda */
+        border-top-right-radius: 50% 50px; /* Curva en la parte superior derecha */
+        box-shadow: 0 -5px 15px #131313;
+    }
+
+    .Logo_header {
+        width: 70%; /* Ajustado para que ocupe todo el ancho disponible */
+        justify-content: center;
+    }
+
+    .servicios {
+        flex-direction: column; /* Cambio a columna para mejor visualización */
+        gap: 5px; /* Reducido */
+        padding: 0;
+    }
+   
+    .pagina__link{
+        font-size: 10px;
+    }
+
+    .menu__paginas {
+        padding: 0;
+        width: auto;
+        font-size: 1.2rem;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .carrito__usuario{
+        gap: 200px
+    }
+    .parallax{
+        margin-top: 10vh;
+        padding-left: 45px;
+
+    }
+    .parallax div{
+        margin-top: 50vh;
+        font-size: 15px;
+        text-align: center;
+    }
+    .parallax div h1{
+        width: 100%;
+    }
+    .parallax div h2{
+        margin: 0;
+    }
+   
+    .article {
+        width: 300px;
+        max-width: 100%; /* Asegura que los artículos no excedan el ancho */
+        height: auto; /* Ajustado para pantallas pequeñas */
+    }
+    .description{
+        font-size: 12px;
+
+    }
+
+    .ofertas {
+        padding: 30px 20px;
+        margin-top:85vh;
+        font-size: 10px;
+    }
+
+    .footer1 {
+        flex-direction: column;
+        font-size: 15px;
+        gap: 10px;
+    }
+    .container__footer1{
+        text-align: center;
+    }
+    .container__redes__links{
+        justify-content: center;
+        gap: 18px;
+    }
+    .redes__links{
+        font-size: 25px;
+    }
+    
+    .container__apps__links{
+       justify-content: center;
+    }
+    
+    .redes__links{
+        width: 15px;
+    }
+
+    .footer1 img {
+        display: none;
+    }
+    
+}
+    @media (min-width: 1979px){
+        
+        .article{
+            max-width: 350px;
+            min-width: 330px;
+            height: 235px;
+            max-height: 235px;  
+        }
+    }
+    @media (max-width: 1000px){
+        header{
+            position: initial;
+        }
+    }
+    @media (pointer: fine){
+        .article{
+            max-width: 350px;
+            min-width: 330px;
+            height: 235px;
+            max-height: 235px;  
+        }
+    }
