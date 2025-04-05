@@ -75,6 +75,7 @@ header{
     border: 2px solid black;
     box-shadow: 2px -2px 4px #131313;
     position: relative;
+    transition: all 0.5s ease;
 }
 .pagina__link:hover{
     background-color: #131313;
@@ -101,13 +102,16 @@ width: 80%;}
 
 .play:hover{
     background-color: #003087;
+    transition: all 0.6s ease;
 }
 .xbox:hover{
     color: black;
     background-color: #52b043;
+    transition: all 0.6s ease;
 }
 .nintendo:hover{
     background-color: #e60012;
+    transition: all 0.6s ease;
 }
 .carrito__usuario{
     display: flex;
@@ -182,42 +186,42 @@ width: 80%;}
 }
 .article{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    width: 30%;
+    width: 30%;      /*todo el tamaño*/
     max-width: 350px;
+    height: 200px;
     max-height: 235px;
     box-shadow: 10px 10px 15px black;
     background-color: #52b04354;
     padding: 2px;
     border-radius: 10px;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
     z-index: 1;
 }
 .article img{
     border-radius: 10px;
-    max-height: 200px;
+    height: 100%;
+    object-fit: cover;
 }
 .article:hover{
     transform: scale(1.1);
     cursor: pointer;
-    padding: 0;
     margin-bottom: 50px;
-    height: 140px;
+    padding: 0;
+    height: 180px;
    transition: all 0.6s ease;
 }
 .gif{
     display: none;
-    width: 100%;
 }
 .article:hover .description p{
     display: none;
 }
 .article:hover .description h3{
-    padding-left: 50px;
-    vertical-align: middle;
-    margin: 0;
-    transition: all 0.4s ease;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.6s ease;
 }
 .article:hover .imagen{
     display: none;
@@ -226,20 +230,23 @@ width: 80%;}
     display: flex;
     
 }
-
 .description{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     color: rgb(227, 227, 227);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    position: relative;
 }
 .description h3{
-    margin: 3px 0;
-    transition: all 0.4s ease;
+    margin: 6px 0;
+    transition: all 0.6s ease;
+    position: absolute;
+    left: 0;
+    right: auto;
 }
 .description p{
-    margin: 3px 0;
+    margin: 6px 0;
+    margin-left: 280px;
     transition: all 0.7s ease;
 }
 .footer1{
