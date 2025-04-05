@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Black</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../Imagenes/Logo__Empresa.png">
+
+    <style>
+        body{
+    margin: 0;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+main{
+    background-image: url(../Imagenes/fondo_pagina.jpg);
+    border-radius: 100px 100px 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap; /*nuevo*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    background-color: #F0F9FF;
+    box-shadow: 0 2px 20px #131313;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.Logo_header{
+    display: flex;
+    cursor: pointer;
+    width: 250px; /*nuevo junto a el tamaño de la imagen*/ 
+}
+.Logo_header a{
+    display: flex;
+}
+.Logo_header img{
+    width: 100%;
+}
+.servicios_menu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.servicios_menu hr{
+    width: 100%;
+}
+.servicios{
+    padding: 5px 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.servicios__link{
+    font-size: 1.2rem;
+}
+.servicios__link:hover{
+    color: #3B5061;
+}
+.menu__paginas{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 5px;
+    min-width: 487px; /*nuevo*/
+}
+.pagina__link{
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 2px -2px 4px #131313;
+    position: relative;
+}
+.pagina__link:hover{
+    background-color: #131313;
+    color: white;
+    border: 2px solid black;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+
+}
+.pagina__link:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #F0F9FF;
+    transform: translateX(-50%);
+    transition: width 0.6s;
+}
+
+.pagina__link:hover::after{
+width: 80%;}
+
+.play:hover{
+    background-color: #003087;
+}
+.xbox:hover{
+    color: black;
+    background-color: #52b043;
+}
+.nintendo:hover{
+    background-color: #e60012;
+}
+.carrito__usuario{
+    display: flex;
+    gap: 10px;
+}
+.carrito__usuario a{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all 0.4s ease;
+    margin: 5px;
+}
+.carrito_link:hover{
+    transform: scale(1.2);
+}
+.usuario_link:hover{
+    transform: scale(1.2);
+}
+
+.parallax{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url(../Imagenes/mantenimiento.jpg);
+    background-repeat: no-repeat;
+    background-color: #525252;
+    background-size: cover;
+    font-size: 2rem;
+}
+
+.parallax div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.parallax div h2{
+    margin-bottom: 165px;
+}
+.footer1{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    box-shadow: 0 -10px 8px #0D070A;
+    background-color: #0D070A;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 29px;
+
+}
+.container__footer1{
+    display: flex;
+    min-width: 231px; /*nuevo*/
+    flex-direction: column;
+    justify-content: space-around;
+}
+.container__footer2{
+    display: flex;
+    min-width: 357.5px; /*nuevo*/
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer1 img{
+    width: 200px;
+    min-width: 200px; /*nuevo*/
+}
+
+.container__contacto__links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contacto__links:hover{
+    transition: all 0.3s ease;
+    color: #3B5061;
+}
+.container__redes__links{
+    display: flex;
+    gap: 50px;
+}
+.redes__links{
+    font-size: 30px;
+}
+.instagram:hover{
+    color: #e1306c;
+    transition: all 0.5s ease;
+
+}
+.twitter:hover{
+    color: #525252;
+    transition: all 0.5s ease;
+
+}
+.youtube:hover{
+    color: #c4302b;
+    transition: all 0.5s ease;
+
+}
+.facebook:hover{
+    color: #1877f2;
+    transition: all 0.5s ease;
+}
+.discord:hover{
+    color: #5865f2;
+    transition: all 0.5s ease;
+
+}
+.container__apps__links{
+    display: flex;
+    gap: 10px;
+}
+.apps__links{
+    border-radius: 20px;
+    border: 2px solid #3B5061;
+    padding: 10px 15px;
+}
+.apps__links:hover{
+    color: #3B5061;
+    background-color: #f0f9ff20;
+    transition: all 0.4s ease;
+}
+.footer1 img{
+    display: flex;
+}
+
+.footer2{
+    display: flex;
+    min-width: 344px; /*nuevo*/
+    flex-direction: column;
+    background-color: #0D070A;
+}
+.hr__footer{
+    color: white;
+    width: 90%;
+}
+.footer2 div{
+    color: white;
+    padding-left: 10%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Logo_header">
+            <a href="../index.html">
+                <img src="../Imagenes/Logo__Empresa.png" style="width: 120px;" alt="">
+                <h1>ELDER BLACK</h1>
+            </a>
+        </div>
+        <div class="servicios_menu">
+            <nav class="servicios">
+                <a href="../Mantenimiento/Mantenimiento.html" class="servicios__link">Tendencias</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="servicios__link">Reservas</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="servicios__link">Próximas salidas</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="servicios__link">Soporte 24/7</a>
+            </nav>
+            <hr>
+            <nav class="menu__paginas">
+                <a href="../index.html" class="pagina__link">Inicio</a>
+                <a href="../Play-Station/PlayStation.html" class="pagina__link play">Play-Station</a>
+                <a href="../Xbox/Xbox.html" class="pagina__link xbox">Xbox</a>
+                <a href="../Nintendo/Nintendo.html" class="pagina__link nintendo">Nintendo</a>
+            </nav>
+        </div>
+        <div class="carrito__usuario">
+            <a href="../Mantenimiento/Mantenimiento.html" class="carrito_link"><img src="../Imagenes/carrito_png.png" alt=""></a>
+            <a href="../Login/Login.html" class="usuario_link"><img src="../Imagenes/acceso.png" alt=""></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="parallax-container">
+            <div class="parallax">
+                <div>
+                    <h1>ESTAMOS EN MANTENIMIENTO</h1>
+                    <h2>Lamentamos las molestias :(</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer1">
+        <div class="container__footer1">
+            <nav class="container__contacto__links">
+                <a href="../Mantenimiento/Mantenimiento.html" class="contacto__links">Términos y condiciones</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="contacto__links">Política de privacidad</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="contacto__links">Programa de afiliación</a>
+                <a href="../Mantenimiento/Mantenimiento.html" class="contacto__links">Contacto</a>
+            </nav>
+        </div>
+        <div class="container__footer2">
+            <nav class="container__redes__links">
+                <a href="https://www.instagram.com/" target="_blank" class="redes__links instagram"><div class="fab fa-instagram"></div></a>
+                <a href="https://x.com/?lang=es" target="_blank" class="redes__links twitter"><div class="fab fa-x-twitter"></div></a>
+                <a href="https://www.facebook.com/login/?locale=es_ES" target="_blank" class="redes__links facebook"><div class="fab fa-facebook"></div></a>
+                <a href="https://www.youtube.com/" target="_blank" class="redes__links youtube"><div class="fab fa-youtube"></div></a>
+                <a href="https://discord.com/" target="_blank" class="redes__links discord"><div class="fab fa-discord"></div></a>
+            </nav>
+            <nav class="container__apps__links">
+                <a href="https://www.apple.com/es/app-store/" target="_blank" class="apps__links">Appstore</a>
+                <a href="https://play.google.com/store/games?hl=es&pli=1" target="_blank" class="apps__links">GooglePlay</a>
+            </nav>
+        </div>
+        <img src="../Imagenes/mantenimiento.gif" alt="">
+    </footer>
+    <footer class="footer2">
+        <hr class="hr__footer">
+        <div>
+            <p>Copyright © 2024 Elder Black - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

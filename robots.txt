@@ -1,0 +1,12 @@
+User-agent: Googlebot
+Disallow: /Mantenimiento/index.html
+Allow: /Play-Station/index.html
+Allow: /Xbox/index.html
+Allow: /Nintendo/index.html
+Allow: /Login/index.html
+
+User-agent: *
+Disallow: /
+
+
+Sitemap: http://bravo.nachoagudo.es/sitemap.xml
