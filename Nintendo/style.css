@@ -286,6 +286,25 @@ width: 80%;}
     flex-direction: column;
     gap: 10px;
 }
+.container__contacto__links {
+    display: flex; /* Usa flexbox para alinear los enlaces */
+    gap: 10px; /* Espacio entre los enlaces */
+}
+.container__contacto__links a:nth-child(1) {
+    width: 240px; /* Ancho para Términos y condiciones */
+}
+.container__contacto__links a:nth-child(2) {
+    width: 222px; /* Ancho para Política de privacidad */
+}
+.container__contacto__links a:nth-child(3) {
+    width: 230px; /* Ancho para Programa de afiliación */
+}
+.container__contacto__links a:nth-child(4) {
+    width: 100px; /* Ancho para Contacto */
+}
+.contacto__links{
+    transition: all 0.3s ease;
+}
 .contacto__links:hover{
     transition: all 0.3s ease;
     color: #3B5061;
@@ -293,6 +312,9 @@ width: 80%;}
 .container__redes__links{
     display: flex;
     gap: 50px;
+}
+.container__redes__links a{
+    transition: all 0.5s ease;
 }
 .redes__links{
     font-size: 30px;
@@ -329,6 +351,7 @@ width: 80%;}
     border-radius: 20px;
     border: 2px solid #3B5061;
     padding: 10px 15px;
+    transition: all 0.4s ease;
 }
 .apps__links:hover{
     color: #3B5061;
